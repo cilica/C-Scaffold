@@ -18,7 +18,10 @@ enable_testing()
 # Unit Tests
 ################################
 # Add test cpp file
-add_executable( runUnitTests test/testgtest.cpp src/add_numbers.c)
-# Link test executable against gtest & gtest_main
-target_link_libraries(runUnitTests ${GTEST_LIBRARIES})
+add_executable( runUnitTests test/testgtest.cpp  test/foo_mock.cpp src/add_numbers.c)
+
+message( ${GTEST_LIBRARIES} )
+
+# Link test executable against gtest & gmock
+target_link_libraries(runUnitTests ${GTEST_ROOT}/lib/libgmock.a ${GTEST_ROOT}/lib/libgtest.a )
 add_test( runUnitTests runUnitTests )
