@@ -7,7 +7,7 @@ find_package(GTest REQUIRED)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/include ${GTEST_INCLUDE_DIRS})
 
-add_executable(demo src/demo.c src/add_numbers.c)
+add_executable(demo src/demo.c src/add_numbers.c src/foo.c)
 
 ################################
 # GTest

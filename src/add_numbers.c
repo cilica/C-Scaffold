@@ -1,12 +1,15 @@
 #include <add_numbers.h>
 
-/* TODO - this should be in a header file */
+/* TODO - these should be in a header file */
 extern void Foo_Resume(void);
+extern char Foo_GetOtherNumber(void);
 
 /* TODO - add description */
-char SumOfTwoNumbers(char a, char b) {
+char SumOfTwoNumbers(char a, char b)
+{
   /* test*/
-  /* REQREF DES_2313 */
-  return a + b;
   Foo_Resume();
+  /* REQREF DES_2313 */
+  /* FIXME Second parameter "b" is useless */
+  return a + Foo_GetOtherNumber();
 }

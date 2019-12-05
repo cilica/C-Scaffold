@@ -2,19 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Ruby: Debug Local File",
-            "type": "Ruby",
-            "request": "launch",
-            "program": "${workspaceRoot}/main.rb"
-        },
-        {
-            "name": "Python: Current File (Integrated Terminal)",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
             "name": "tests",
             "type": "cppdbg",
             "request": "launch",
@@ -23,6 +10,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
+            "miDebuggerPath": "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gdb.exe",
             "externalConsole": true,
             "MIMode": "gdb",
             "setupCommands": [
@@ -43,6 +31,7 @@
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
+            "miDebuggerPath": "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gdb.exe",
             "MIMode": "gdb",
             "setupCommands": [
                 {
