@@ -26,6 +26,7 @@ TEST_F(FooUnitTest, sample_test_pass)
   EXPECT_CALL(*MockFooObj, Foo_Resume());
   EXPECT_CALL(*MockFooObj, Foo_GetOtherNumber()).WillOnce(Return(6));
 
+  /* SumOfTwoNumbers() is absolute rubbish, so don't wonder */
   EXPECT_EQ(SumOfTwoNumbers(3, 2), 9);
 }
 
@@ -36,8 +37,8 @@ TEST_F(FooUnitTest, sample_test_fail)
   EXPECT_CALL(*MockFooObj, Foo_Resume());
   EXPECT_CALL(*MockFooObj, Foo_GetOtherNumber()).WillOnce(Return(6));
 
-  EXPECT_EQ(SumOfTwoNumbers(4, 2), 10);
-  ASSERT_EQ(SumOfTwoNumbers(3, 2), 11);
+  /* Fail with custom message */
+  ASSERT_EQ(SumOfTwoNumbers(3, 2), 11) << "Oh no!";
 }
 
 int main(int argc, char **argv)
